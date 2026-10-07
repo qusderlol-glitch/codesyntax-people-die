@@ -3,126 +3,266 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CodeSyntax: People Die — скачать</title>
-<meta name="description" content="CodeSyntax: People Die — gore-песочница с ragdoll-физикой, ловушками и кровью. Скачать для Windows.">
+<title>CodeSyntax: People Die — gore sandbox for Windows</title>
+<meta name="description" content="CodeSyntax: People Die — gore sandbox with ragdoll physics, traps, dynamic blood and AI bots. Free download for Windows. 18+.">
+<meta name="theme-color" content="#0b0708">
+<meta property="og:type" content="website">
 <meta property="og:title" content="CodeSyntax: People Die">
-<meta property="og:description" content="Gore-песочница с ragdoll-физикой, ловушками и кровью. Windows, бесплатно.">
-<meta property="og:image" content="media/poster.jpg">
-<link rel="icon" href="media/favicon.png">
-<style>
-:root{--bg:#0b0708;--bg2:#140c0e;--card:#1a1012;--line:#3a1a1e;--red:#c4141f;--red2:#ff3040;--tx:#ece3e3;--mut:#a08c8e}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:radial-gradient(1200px 600px at 50% -10%,#2a0b10 0,var(--bg) 60%) fixed,var(--bg);color:var(--tx);font:16px/1.6 "Segoe UI",system-ui,Arial,sans-serif}
-a{color:var(--red2)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font:800 22px Consolas,monospace;letter-spacing:1px;color:#fff;text-decoration:none}
-.logo b{color:var(--red2)}
-.lang button{background:none;border:1px solid var(--line);color:var(--mut);padding:4px 12px;cursor:pointer;font:inherit}
-.lang button.on{background:var(--red);color:#fff;border-color:var(--red)}
-.hero{text-align:center;padding:40px 0 20px}
-h1{font:800 clamp(34px,7vw,72px)/1.05 "Segoe UI",Arial,sans-serif;letter-spacing:-1px;text-transform:uppercase}
-h1 span{color:var(--red2);display:block;font-size:.55em;letter-spacing:6px}
-.tag{color:var(--mut);margin:16px auto 28px;max-width:640px;font-size:18px}
-.btn{display:inline-block;background:linear-gradient(#e0202c,#9c0f19);color:#fff;text-decoration:none;font-weight:700;font-size:20px;padding:16px 38px;border-radius:6px;box-shadow:0 0 30px #c4141f66;border:1px solid #ff5560}
-.btn:hover{filter:brightness(1.15)}
-.btn.small{font-size:15px;padding:10px 20px;box-shadow:none;background:var(--card);border:1px solid var(--line)}
-.meta{color:var(--mut);font-size:14px;margin-top:14px}
-.warn{display:inline-block;margin-top:22px;border:1px solid var(--red);color:#ff8088;padding:6px 14px;font-weight:700;letter-spacing:1px}
-video{width:100%;border:1px solid var(--line);border-radius:8px;background:#000;margin:34px 0 10px;box-shadow:0 10px 60px #0009}
-section{padding:36px 0}
-h2{font-size:28px;margin-bottom:18px;text-transform:uppercase;letter-spacing:2px}
-h2::after{content:"";display:block;width:60px;height:3px;background:var(--red);margin-top:8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);padding:18px;border-radius:6px}
-.card h3{font-size:17px;margin-bottom:6px;color:#fff}
-.card p{color:var(--mut);font-size:15px}
-table{border-collapse:collapse;width:100%}
-td{border-bottom:1px solid var(--line);padding:8px 10px;color:var(--mut)}
-td:first-child{color:var(--tx);width:34%}
-code{background:#000;padding:2px 6px;border-radius:3px;color:#ffb0b5;word-break:break-all;font-size:13px}
-details{background:var(--card);border:1px solid var(--line);padding:12px 16px;border-radius:6px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:600}
-details p{color:var(--mut);margin-top:8px}
-footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0 50px;color:var(--mut);font-size:14px;text-align:center}
-.en{display:none}
-body.en-mode .ru{display:none}
-body.en-mode .en{display:revert}
-</style>
+<meta property="og:description" content="Gore sandbox with ragdoll physics, traps, dynamic blood and AI bots. Windows, 18+.">
+<meta property="og:image" content="media/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<nav>
-  <a class="logo" href="#">&lt;<b>QS</b>&gt; CodeSyntax</a>
-  <div class="lang"><button id="bru" class="on">RU</button><button id="ben">EN</button></div>
-</nav>
 
-<div class="hero">
-  <h1>CodeSyntax<span>People Die</span></h1>
-  <p class="tag ru">Gore-песочница с ragdoll-физикой, ловушками, динамической кровью и ботами. Выживай, экспериментируй, ломай.</p>
-  <p class="tag en">A gore sandbox with ragdoll physics, traps, dynamic blood and bots. Survive, experiment, break things.</p>
-  <a class="btn" id="dl" href="https://github.com/qusderlol-glitch/codesyntax-people-die/releases/download/v0.2.0/CodeSyntax_Setup.exe"><span class="ru">⬇ Скачать для Windows</span><span class="en">⬇ Download for Windows</span></a>
-  <p class="meta"><span class="ru">Установщик · Windows 10/11 64-bit · бесплатно · версия 0.2.0</span><span class="en">Installer · Windows 10/11 64-bit · free · version 0.2.0</span></p>
-  <div class="warn">18+</div>
-</div>
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-ragdoll" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v6M12 10l-5 3M12 10l5 2M12 14l-3 7M12 14l4 6"/></symbol>
+  <symbol id="i-blood" viewBox="0 0 24 24"><path d="M12 3c3.5 4.5 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-11z"/></symbol>
+  <symbol id="i-trap" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/><circle cx="12" cy="12" r="1.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M12 2v8a4 4 0 1 1-4 4"/><path d="M3 22h18"/></symbol>
+  <symbol id="i-modes" viewBox="0 0 24 24"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></symbol>
+  <symbol id="i-weapon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 2v5M12 17v5M2 12h5M17 12h5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="i-tex" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 12h18M12 4v16"/></symbol>
+</svg>
 
-<video controls preload="metadata" poster="media/poster.jpg" src="media/trailer.mp4"></video>
-<p class="meta" style="text-align:center"><a href="media/theme.mp3" download><span class="ru">Скачать главную тему (mp3)</span><span class="en">Download the main theme (mp3)</span></a></p>
+<a class="skip" href="#main"><span class="ru">К содержимому</span><span class="en">Skip to content</span></a>
 
-<section>
-  <h2><span class="ru">Особенности</span><span class="en">Features</span></h2>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="CodeSyntax: People Die"><img src="media/favicon.png" alt="" width="34" height="34"><span>CodeSyntax</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#features"><span class="ru">Игра</span><span class="en">Game</span></a>
+      <a href="#install"><span class="ru">Установка</span><span class="en">Install</span></a>
+      <a href="#requirements"><span class="ru">Требования</span><span class="en">Requirements</span></a>
+      <a href="#faq">FAQ</a>
+      <a href="#credits"><span class="ru">Авторы</span><span class="en">Credits</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="hero-art">
+    <img src="media/keyart.jpg" width="1600" height="900" alt="CodeSyntax: People Die — key art" fetchpriority="high">
+  </div>
+  <div class="wrap hero-body">
+    <h1 class="sr">CodeSyntax: People Die</h1>
+    <p class="tag ru">Gore-песочница с ragdoll-физикой, ловушками, динамической кровью и ботами. Выживай, экспериментируй, ломай.</p>
+    <p class="tag en">A gore sandbox with ragdoll physics, traps, dynamic blood and bots. Survive, experiment, break things.</p>
+
+    <div class="dl">
+      <a class="btn" id="dl" href="https://github.com/qusderlol-glitch/codesyntax-people-die/releases/download/v0.3.0/CodeSyntax_Setup.exe">
+        <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>
+        <span class="btn-txt">
+          <b><span class="ru">Скачать для Windows</span><span class="en">Download for Windows</span></b>
+          <small>0.6 MB + ~860 MB · v0.3.0 · Windows 10/11 64-bit</small>
+        </span>
+      </a>
+      <div class="sha">
+        <span class="sha-l">SHA-256</span>
+        <code id="sha">6a74d7c6836faaa2ad900fe474493ea65788df965ee1e648bfe0848914a14a04</code>
+        <button type="button" class="copy" id="copy" data-ru="Копировать" data-en="Copy" data-ok-ru="Скопировано" data-ok-en="Copied">Копировать</button>
+      </div>
+      <p class="fine"><span class="ru">Бесплатно · Early Access · установщик пока без цифровой подписи (см. «Как установить»)</span><span class="en">Free · Early Access · the installer is not code-signed yet (see “How to install”)</span></p>
+      <p class="warn"><b>18+</b> <span class="ru">Игра содержит жестокое насилие и кровь. Только для взрослых.</span><span class="en">Contains graphic violence and gore. Adults only.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap sec" id="trailer">
+  <h2><span class="ru">Трейлер</span><span class="en">Trailer</span></h2>
+  <div class="video">
+    <video controls preload="metadata" poster="media/poster.jpg" src="media/trailer.mp4"></video>
+  </div>
+  <p class="aside"><a href="media/theme.mp3" download>
+    <svg class="mini" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+    <span class="ru">Скачать главную тему (mp3)</span><span class="en">Download the main theme (mp3)</span></a></p>
+</section>
+
+<section class="wrap sec" id="features">
+  <h2><span class="ru">Что внутри</span><span class="en">What’s inside</span></h2>
   <div class="grid">
-    <div class="card"><h3 class="ru">Ragdoll-физика</h3><h3 class="en">Ragdoll physics</h3><p class="ru">Каждое тело — настоящая физическая модель на Jolt: падения, удары, расчленение.</p><p class="en">Every body is a real Jolt physics model: falls, impacts, dismemberment.</p></div>
-    <div class="card"><h3 class="ru">Динамическая кровь</h3><h3 class="en">Dynamic blood</h3><p class="ru">Брызги летят по траектории пули, оставляют следы и лужи там, где пролилась кровь. Не исчезает — или настрой сам.</p><p class="en">Splatter follows the bullet path, leaves trails and pools where blood fell. Persistent, or configurable.</p></div>
-    <div class="card"><h3 class="ru">Ловушки и оружие</h3><h3 class="en">Traps &amp; weapons</h3><p class="ru">Карта полна механизмов, чтобы испытывать их на ботах.</p><p class="en">A map full of contraptions to test on bots.</p></div>
-    <div class="card"><h3 class="ru">Боты с ИИ</h3><h3 class="en">AI bots</h3><p class="ru">NPC ходят по навигации, реагируют на выстрелы и ловушки.</p><p class="en">NPCs navigate the map and react to shots and traps.</p></div>
-    <div class="card"><h3 class="ru">1-е / 3-е лицо</h3><h3 class="en">1st / 3rd person</h3><p class="ru">Переключение камеры одной кнопкой, меню и настройки в стиле Roblox.</p><p class="en">Switch camera with one key; Roblox-style menu and settings.</p></div>
-    <div class="card"><h3 class="ru">Без внешних ассетов</h3><h3 class="en">Fully procedural</h3><p class="ru">Все текстуры, звуки и музыка генерируются кодом.</p><p class="en">All textures, sounds and music are generated in code.</p></div>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-ragdoll"/></svg>
+      <h3 class="ru">Ragdoll-физика</h3><h3 class="en">Ragdoll physics</h3>
+      <p class="ru">Каждое тело — настоящая физическая модель на Jolt: падения, удары, разрывы и расчленение.</p>
+      <p class="en">Every body is a real Jolt physics model: falls, impacts, tearing and dismemberment.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-blood"/></svg>
+      <h3 class="ru">Динамическая кровь</h3><h3 class="en">Dynamic blood</h3>
+      <p class="ru">Брызги летят по траектории удара, оставляют следы и лужи. Не исчезает — или настрой сам.</p>
+      <p class="en">Splatter follows the hit, leaves trails and pools. Persistent, or configurable.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-trap"/></svg>
+      <h3 class="ru">Ловушки</h3><h3 class="en">Traps</h3>
+      <p class="ru">Пилы, крюки и механизмы, которые можно испытывать на ботах — и на себе.</p>
+      <p class="en">Saws, hooks and contraptions to test on bots — and on yourself.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-ai"/></svg>
+      <h3 class="ru">Боты с ИИ</h3><h3 class="en">AI bots</h3>
+      <p class="ru">NPC ходят по навигационной сетке, реагируют на выстрелы и ловушки.</p>
+      <p class="en">NPCs navigate the map and react to gunfire and traps.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg>
+      <h3><span class="ru">Новая карта: бойня</span><span class="en">New map: slaughterhouse</span><i class="new">0.3</i></h3>
+      <p class="ru">Цеха, конвейеры и подвешенные на крюках туши — полигон для экспериментов.</p>
+      <p class="en">Halls, conveyors and carcasses on hooks — a playground for experiments.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-modes"/></svg>
+      <h3><span class="ru">Игровые режимы</span><span class="en">Game modes</span><i class="new">0.3</i></h3>
+      <p class="ru"><b>Sandbox</b> — делай что хочешь. <b>Survival</b> — волны врагов. <b>Trap challenge</b> — испытания на ловушках.</p>
+      <p class="en"><b>Sandbox</b> — do whatever you like. <b>Survival</b> — waves of enemies. <b>Trap challenge</b> — trap-based challenges.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-weapon"/></svg>
+      <h3><span class="ru">Новое оружие</span><span class="en">New weapons</span><i class="new">0.3</i></h3>
+      <p class="ru">Тесак, бензопила, ракетомёт, огнемёт, гранаты и «граб»-инструмент, чтобы таскать и швырять всё подряд.</p>
+      <p class="en">Cleaver, chainsaw, rocket launcher, flamethrower, grenades and a grab tool for dragging and throwing anything.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg>
+      <h3><span class="ru">Достижения</span><span class="en">Achievements</span><i class="new">0.3</i></h3>
+      <p class="ru">Награды за жестокую изобретательность и выживание.</p>
+      <p class="en">Rewards for cruel ingenuity and survival.</p></article>
+    <article class="card"><svg class="ico" aria-hidden="true"><use href="#i-tex"/></svg>
+      <h3><span class="ru">4K-текстуры, всё из кода</span><span class="en">4K textures, all from code</span><i class="new">0.3</i></h3>
+      <p class="ru">Текстуры 4K, звуки и музыка генерируются процедурно — без сторонних ассетов.</p>
+      <p class="en">4K textures, sounds and music are generated procedurally — no third-party assets.</p></article>
   </div>
 </section>
 
-<section>
+<section class="wrap sec" id="install">
   <h2><span class="ru">Как установить</span><span class="en">How to install</span></h2>
-  <div class="card">
-    <p class="ru">1. Скачайте <b>CodeSyntax_Setup.exe</b>. 2. Запустите и нажмите «Далее» — установщик сам скачает отдельные части игры (текстуры, звуки, механики, мир, интерфейс), проверит их контрольные суммы и соберёт игру. 3. Запустите ярлык «CodeSyntax - People Die». Godot не нужен.</p>
-    <p class="en">1. Download <b>CodeSyntax_Setup.exe</b>. 2. Run it and click Next — the installer downloads the separate game parts (textures, sounds, mechanics, world, interface), verifies their checksums and assembles the game. 3. Launch the “CodeSyntax - People Die” shortcut. Godot is not required.</p>
+  <ol class="steps">
+    <li><div class="n">1</div>
+      <div><h3 class="ru">Скачайте установщик</h3><h3 class="en">Download the installer</h3>
+      <p class="ru">Файл <b>CodeSyntax_Setup.exe</b> — кнопка «Скачать для Windows» выше.</p>
+      <p class="en">The <b>CodeSyntax_Setup.exe</b> file — use the “Download for Windows” button above.</p></div></li>
+    <li><div class="n">2</div>
+      <div><h3 class="ru">Запустите и нажмите «Далее»</h3><h3 class="en">Run it and click Next</h3>
+      <p class="ru">Установщик сам скачает отдельные части игры, проверит каждую по SHA-256 и соберёт игру. Godot устанавливать не нужно.</p>
+      <p class="en">The installer downloads the separate game part files, checks each one against its SHA-256 and assembles the game. You don’t need Godot.</p></div></li>
+    <li><div class="n">3</div>
+      <div><h3 class="ru">Запустите игру</h3><h3 class="en">Launch the game</h3>
+      <p class="ru">Используйте ярлык «CodeSyntax - People Die».</p>
+      <p class="en">Use the “CodeSyntax - People Die” shortcut.</p></div></li>
+  </ol>
+  <div class="note">
+    <svg class="mini" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg>
+    <p class="ru"><b>Windows SmartScreen.</b> Установщик пока без цифровой подписи, поэтому Windows может показать предупреждение. Нажмите «Подробнее» → «Выполнить в любом случае». Подлинность файла можно проверить по SHA-256 выше.</p>
+    <p class="en"><b>Windows SmartScreen.</b> The installer is not code-signed yet, so Windows may show a warning. Click “More info” → “Run anyway”. You can verify the file with the SHA-256 above.</p>
   </div>
-  <p class="meta"><span class="ru">Установщик пока без цифровой подписи, поэтому Windows SmartScreen может показать предупреждение: нажмите «Подробнее» → «Выполнить в любом случае». Проверить файл можно по SHA-256:</span><span class="en">The installer is not code-signed yet, so Windows SmartScreen may warn you: click “More info” → “Run anyway”. You can verify the file by SHA-256:</span></p>
-  <p><code>36b1d00dd6dc10f6b60660f6b0d3ba88b886ba200fd8b9cf4da2e8c7d8325b2a</code></p>
 </section>
 
-<section>
+<section class="wrap sec" id="requirements">
   <h2><span class="ru">Системные требования</span><span class="en">System requirements</span></h2>
-  <table>
-    <tr><td>OS</td><td>Windows 10 / 11 (64-bit)</td></tr>
-    <tr><td class="ru">Видеокарта</td><td class="ru">Поддержка Vulkan 1.2 (GTX 960 / RX 570 и новее)</td></tr>
-    <tr><td class="en">GPU</td><td class="en">Vulkan 1.2 capable (GTX 960 / RX 570 or newer)</td></tr>
-    <tr><td class="ru">Память</td><td class="ru">8 ГБ ОЗУ</td></tr>
-    <tr><td class="en">Memory</td><td class="en">8 GB RAM</td></tr>
-    <tr><td class="ru">Диск</td><td class="ru">~200 МБ</td></tr>
-    <tr><td class="en">Disk</td><td class="en">~200 MB</td></tr>
-  </table>
+  <div class="table-wrap"><table>
+    <thead><tr><th></th><th><span class="ru">Минимум</span><span class="en">Minimum</span></th><th><span class="ru">Рекомендуется</span><span class="en">Recommended</span></th></tr></thead>
+    <tbody>
+    <tr><th scope="row"><span class="ru">ОС</span><span class="en">OS</span></th><td colspan="2">Windows 10 / 11, 64-bit</td></tr>
+    <tr><th scope="row"><span class="ru">Видеокарта</span><span class="en">GPU</span></th><td><span class="ru">с поддержкой Vulkan 1.2</span><span class="en">Vulkan 1.2 capable</span></td><td><span class="ru">Vulkan 1.2, 6 ГБ VRAM (из-за 4K-текстур)</span><span class="en">Vulkan 1.2, 6 GB VRAM (because of 4K textures)</span></td></tr>
+    <tr><th scope="row"><span class="ru">Память</span><span class="en">RAM</span></th><td>8 <span class="ru">ГБ</span><span class="en">GB</span></td><td>16 <span class="ru">ГБ</span><span class="en">GB</span></td></tr>
+    <tr><th scope="row"><span class="ru">Диск</span><span class="en">Disk</span></th><td colspan="2">~1.5 <span class="ru">ГБ</span><span class="en">GB</span></td></tr>
+    <tr><th scope="row"><span class="ru">Сеть</span><span class="en">Network</span></th><td colspan="2"><span class="ru">Интернет нужен только для установки</span><span class="en">Internet is needed only for installation</span></td></tr>
+    </tbody>
+  </table></div>
 </section>
 
-<section>
+<section class="wrap sec" id="faq">
   <h2>FAQ</h2>
-  <details><summary class="ru">Нужен ли Godot?</summary><summary class="en">Do I need Godot?</summary><p class="ru">Нет. Игра — обычный .exe, ничего устанавливать дополнительно не надо.</p><p class="en">No. The game is a regular .exe, nothing else to install.</p></details>
-  <details><summary class="ru">Это безопасно?</summary><summary class="en">Is it safe?</summary><p class="ru">Установщик скачивает файлы только с этого GitHub-релиза и сверяет каждый с SHA-256 из встроенного манифеста; изменённый файл будет отклонён. Игра не собирает данные.</p><p class="en">The installer downloads files only from this GitHub release and checks each against the SHA-256 in its embedded manifest; a modified file is rejected. The game collects no data.</p></details>
-  <details><summary class="ru">Как сообщить об ошибке?</summary><summary class="en">How do I report a bug?</summary><p class="ru">В игре есть кнопка Report Bug в меню.</p><p class="en">There is a Report Bug button in the in-game menu.</p></details>
+  <details><summary><span class="ru">Нужен ли Godot?</span><span class="en">Do I need Godot?</span></summary>
+    <p class="ru">Нет. Игра — обычное приложение для Windows, ничего дополнительно ставить не надо.</p>
+    <p class="en">No. The game is a regular Windows application; nothing else to install.</p></details>
+  <details><summary><span class="ru">Это безопасно?</span><span class="en">Is it safe?</span></summary>
+    <p class="ru">Установщик скачивает файлы только из релизов этого проекта на GitHub и сверяет каждый с SHA-256 из встроенного манифеста; изменённый файл отклоняется. Игра не собирает данные.</p>
+    <p class="en">The installer downloads files only from this project’s GitHub releases and checks each one against the SHA-256 in its embedded manifest; a modified file is rejected. The game collects no data.</p></details>
+  <details><summary><span class="ru">Почему SmartScreen ругается?</span><span class="en">Why does SmartScreen warn me?</span></summary>
+    <p class="ru">У установщика пока нет цифровой подписи, а Windows с подозрением относится к малоизвестным неподписанным файлам. Нажмите «Подробнее» → «Выполнить в любом случае».</p>
+    <p class="en">The installer has no code-signing certificate yet, and Windows is wary of little-known unsigned files. Click “More info” → “Run anyway”.</p></details>
+  <details><summary><span class="ru">Как сообщить об ошибке?</span><span class="en">How do I report a bug?</span></summary>
+    <p class="ru">В меню игры есть кнопка Report Bug. Также можно открыть issue в <a href="https://github.com/qusderlol-glitch/codesyntax-people-die/issues" rel="noopener">репозитории на GitHub</a>.</p>
+    <p class="en">Use the Report Bug button in the in-game menu, or open an issue in the <a href="https://github.com/qusderlol-glitch/codesyntax-people-die/issues" rel="noopener">GitHub repository</a>.</p></details>
+  <details><summary><span class="ru">Где старые версии?</span><span class="en">Where are older versions?</span></summary>
+    <p class="ru">Все релизы собраны на <a href="https://github.com/qusderlol-glitch/codesyntax-people-die/releases" rel="noopener">странице релизов</a>.</p>
+    <p class="en">All releases are listed on the <a href="https://github.com/qusderlol-glitch/codesyntax-people-die/releases" rel="noopener">releases page</a>.</p></details>
 </section>
-</div>
-<footer>
-  <div class="wrap">© CodeSyntax · <span class="ru">Игра содержит насилие и кровь — только для взрослых.</span><span class="en">Contains violence and gore — adults only.</span></div>
+
+<section class="wrap sec" id="credits">
+  <h2><span class="ru">Авторы</span><span class="en">Credits</span></h2>
+  <div class="credits">
+    <div class="who">
+      <h3>CodeSyntaxis <small>(Qusderlol)</small></h3>
+      <p class="role"><span class="ru">Главный разработчик и создатель</span><span class="en">Main Developer &amp; Creator</span></p>
+      <p class="ru">Геймдизайн, руководство проектом, тестирование.</p>
+      <p class="en">Game design, direction, testing.</p>
+    </div>
+    <div class="who">
+      <h3>Claude <small><span class="ru">ИИ-модель Anthropic</span><span class="en">AI model by Anthropic</span></small></h3>
+      <p class="role"><span class="ru">Главный разработчик (программирование и системы)</span><span class="en">Main Developer (programming &amp; systems)</span></p>
+      <p class="ru">Писал и дорабатывал код игры, инструменты и установщик вместе с Qusderlol.</p>
+      <p class="en">Wrote and iterated the game code, tools and installer together with Qusderlol.</p>
+    </div>
+  </div>
+  <dl class="dl-list">
+    <dt><span class="ru">Команда</span><span class="en">Team</span></dt>
+    <dd><a href="https://qusderlol-glitch.github.io/quscode/">QusCode</a></dd>
+    <dt><span class="ru">Звук и музыка</span><span class="en">Audio</span></dt>
+    <dd><span class="ru">Все звуки и музыка синтезируются кодом.</span><span class="en">All sounds and music are procedurally synthesised by code.</span></dd>
+    <dt><span class="ru">Текстуры</span><span class="en">Textures</span></dt>
+    <dd><span class="ru">Процедурно сгенерированные 4K-текстуры, созданные кодом. Сторонних художественных ассетов нет.</span><span class="en">Procedurally generated 4K textures made by code. No third-party art assets.</span></dd>
+    <dt><span class="ru">Стороннее ПО</span><span class="en">Third-party software</span></dt>
+    <dd>
+      <ul>
+        <li><a href="https://godotengine.org" rel="noopener">Godot Engine</a> — MIT License, © Godot Engine contributors</li>
+        <li><a href="https://github.com/jrouwe/JoltPhysics" rel="noopener">Jolt Physics</a> — MIT License, © Jorrit Rouwe</li>
+      </ul>
+      <details class="lic"><summary><span class="ru">Текст лицензии MIT</span><span class="en">MIT License notice</span></summary>
+<pre>MIT License
+
+Copyright (c) Godot Engine contributors
+Copyright (c) Jorrit Rouwe
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+      </details>
+    </dd>
+  </dl>
+  <p class="disc ru">Claude — ИИ-модель, созданная Anthropic. CodeSyntax: People Die — независимый проект, не связанный с Anthropic и не одобренный ею.</p>
+  <p class="disc en">Claude is an AI model made by Anthropic. CodeSyntax: People Die is an independent project and is not affiliated with or endorsed by Anthropic.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="#top"><img src="media/favicon.png" alt="" width="34" height="34"><span>CodeSyntax: People Die</span></a>
+      <p class="ru">Игра содержит жестокое насилие и кровь — только для взрослых (18+).</p>
+      <p class="en">Contains graphic violence and gore — adults only (18+).</p>
+    </div>
+    <ul class="foot-links">
+      <li><a href="https://qusderlol-glitch.github.io/quscode/"><span class="ru">Команда QusCode</span><span class="en">Team: QusCode</span></a></li>
+      <li><a href="https://github.com/qusderlol-glitch/codesyntax-people-die" rel="noopener"><span class="ru">Репозиторий на GitHub</span><span class="en">GitHub repository</span></a></li>
+      <li><a href="https://github.com/qusderlol-glitch/codesyntax-people-die/releases" rel="noopener"><span class="ru">Релизы</span><span class="en">Releases</span></a></li>
+      <li><a href="https://github.com/qusderlol-glitch" rel="noopener">GitHub: qusderlol-glitch</a></li>
+    </ul>
+  </div>
 </footer>
-<script>
-(function(){
-  var b=document.body,ru=document.getElementById('bru'),en=document.getElementById('ben');
-  function set(l){b.classList.toggle('en-mode',l==='en');document.documentElement.lang=l;ru.classList.toggle('on',l==='ru');en.classList.toggle('on',l==='en');try{localStorage.setItem('lang',l)}catch(e){}}
-  ru.onclick=function(){set('ru')};en.onclick=function(){set('en')};
-  var s=null;try{s=localStorage.getItem('lang')}catch(e){}
-  set(s||((navigator.language||'').slice(0,2)==='ru'?'ru':'en'));
-})();
-</script>
+
+<script src="app.js"></script>
 </body>
 </html>
