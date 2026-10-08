@@ -159,3 +159,5 @@ pre{font:12.5px/1.55 var(--mono);color:var(--mut);padding:0 14px 14px;white-spac
 .maps img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .maps figcaption{padding:10px 14px;font-size:.95rem;color:#d8cfcf}
 .maps figcaption b{color:#fff}
+
+.vt{margin:26px 0 10px;font-size:1.05rem;font-weight:700;color:#e8dede}.vt:first-of-type{margin-top:0}
